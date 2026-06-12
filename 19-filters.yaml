@@ -1,0 +1,56 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: linux, shell, ansible, terraform
+    course: "Devops with Ansible"
+  tagsMap:
+    Name: ansible
+    Project: roboshop
+    Component: catalogue
+  tagsList: [
+    {
+        "key": "name",
+        "value": "ansible"
+    },
+    {
+        "key": "Project",
+        "value": "roboshop"
+    },
+    {
+        "key": "Component",
+        "value": "catalogue"
+    }
+  ]
+  tasks:
+  - name: greeting
+    ansible.builtin.debug:
+      msg: "Hi Sivakumar, {{ GREETING  | default('Good Morning') }}"
+
+  - name: convert sring to list
+    ansible.builtin.debug:
+      msg: "{{ topics  | split(',') }}"
+
+  - name: convert map to list
+    ansible.builtin.debug:
+      msg: "{{ tagsMap  | dict2items }}"
+
+  - name: convert list to map
+    ansible.builtin.debug:
+      msg: "{{ tagsList  | items2dict }}"
+
+  - name: read students yaml
+    ansible.builtin.set_fact: #setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
+
+  - name: convert yaml to json
+    ansible.builtin.debug:
+      msg:"{{ student_yaml | to_nice_json }}"
+
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg:"{{ course | upper }}"
+
+  - name: convert to lower case
+    ansible.builtin.debug:
+      msg:"{{ course | lower }}"
