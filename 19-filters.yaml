@@ -5,23 +5,23 @@
     topics: linux, shell, ansible, terraform
     course: "Devops with Ansible"
     myIp: "192.56.89.185" 
-  tagsMap:
-    Name: ansible
-    Project: roboshop
-    Component: catalogue
-  tagsList: [
-    {
-        "key": "name",
-        "value": "ansible"
-    },
-    {
-        "key": "Project",
-        "value": "roboshop"
-    },
-    {
-        "key": "Component",
-        "value": "catalogue"
-    }
+    tagsMap:
+      Name: ansible
+      Project: roboshop
+      Component: catalogue
+    tagsList: [
+      {
+          "key": "name",
+          "value": "ansible"
+      },
+      {
+          "key": "Project",
+          "value": "roboshop"
+      },
+      {
+          "key": "Component",
+          "value": "catalogue"
+      }
   ]
   tasks:
   - name: greeting
