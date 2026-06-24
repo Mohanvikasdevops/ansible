@@ -10,18 +10,18 @@
       Project: roboshop
       Component: catalogue
     tagsList: [
-      {
-          "key": "name",
-          "value": "ansible"
-      },
-      {
-          "key": "Project",
-          "value": "roboshop"
-      },
-      {
-          "key": "Component",
-          "value": "catalogue"
-      }
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "Project",
+            "value": "roboshop"
+        },
+        {
+            "key": "Component",
+            "value": "catalogue"
+        }
     ]
   tasks:
   - name: greeting
