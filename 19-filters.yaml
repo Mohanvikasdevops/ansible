@@ -22,7 +22,7 @@
           "key": "Component",
           "value": "catalogue"
       }
-  ]
+    ]
   tasks:
   - name: greeting
     ansible.builtin.debug:
