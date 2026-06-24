@@ -7,7 +7,7 @@
     city: hyderabad
     type: current
 
-  -FlatNumber: 203
+  - FlatNumber: 203
     street: "gandhi nagar"
     city: hyderabad
     type: perm
@@ -21,7 +21,7 @@
     city: hyderabad
     type: current
 
-  -FlatNumber: 203
+  - FlatNumber: 203
     street: "gandhi nagar"
     city: hyderabad
     type: permanent
