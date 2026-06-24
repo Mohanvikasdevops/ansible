@@ -46,15 +46,15 @@
 
   - name: convert yaml to json
     ansible.builtin.debug:
-      msg:"{{ student_yaml | to_nice_json }}"
+      msg: "{{ student_yaml | to_nice_json }}"
 
   - name: convert to upper case
     ansible.builtin.debug:
-      msg:"{{ course | upper }}"
+      msg: "{{ course | upper }}"
 
   - name: convert to lower case
     ansible.builtin.debug:
-      msg:"{{ course | lower }}"
+      msg: "{{ course | lower }}"
 
   - name: check ipv4
     ansible.builtin.debug:
